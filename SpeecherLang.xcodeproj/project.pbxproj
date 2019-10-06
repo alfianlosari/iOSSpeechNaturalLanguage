@@ -7,16 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B3DB4452349DA540045AA76 /* SpeechResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3DB4442349DA540045AA76 /* SpeechResultsViewController.swift */; };
 		8B92D86C23491DD700697F95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B92D86B23491DD700697F95 /* AppDelegate.swift */; };
 		8B92D86E23491DD700697F95 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B92D86D23491DD700697F95 /* SceneDelegate.swift */; };
 		8B92D87023491DD700697F95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B92D86F23491DD700697F95 /* ViewController.swift */; };
 		8B92D87323491DD800697F95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B92D87123491DD800697F95 /* Main.storyboard */; };
 		8B92D87523491DD900697F95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B92D87423491DD900697F95 /* Assets.xcassets */; };
 		8B92D87823491DD900697F95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B92D87623491DD900697F95 /* LaunchScreen.storyboard */; };
+		8B9DCDFC234A0ED7002E2367 /* TokenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9DCDFA234A0ED7002E2367 /* TokenTableViewCell.swift */; };
+		8B9DCDFD234A0ED7002E2367 /* TokenTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B9DCDFB234A0ED7002E2367 /* TokenTableViewCell.xib */; };
+		8B9DCE00234A1009002E2367 /* PillCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9DCDFE234A1009002E2367 /* PillCollectionViewCell.swift */; };
+		8B9DCE01234A1009002E2367 /* PillCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B9DCDFF234A1009002E2367 /* PillCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8B92D86823491DD700697F95 /* SpeecherLang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeecherLang.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B3DB4442349DA540045AA76 /* SpeechResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechResultsViewController.swift; sourceTree = "<group>"; };
+		8B92D86823491DD700697F95 /* Speech Natural Language Analyzer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Speech Natural Language Analyzer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B92D86B23491DD700697F95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B92D86D23491DD700697F95 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8B92D86F23491DD700697F95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +30,11 @@
 		8B92D87423491DD900697F95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B92D87723491DD900697F95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B92D87923491DDA00697F95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B92D87F23491DF700697F95 /* SpeecherLang.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SpeecherLang.entitlements; sourceTree = "<group>"; };
+		8B9DCDFA234A0ED7002E2367 /* TokenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenTableViewCell.swift; sourceTree = "<group>"; };
+		8B9DCDFB234A0ED7002E2367 /* TokenTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TokenTableViewCell.xib; sourceTree = "<group>"; };
+		8B9DCDFE234A1009002E2367 /* PillCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillCollectionViewCell.swift; sourceTree = "<group>"; };
+		8B9DCDFF234A1009002E2367 /* PillCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PillCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +59,7 @@
 		8B92D86923491DD700697F95 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8B92D86823491DD700697F95 /* SpeecherLang.app */,
+				8B92D86823491DD700697F95 /* Speech Natural Language Analyzer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,9 +67,15 @@
 		8B92D86A23491DD700697F95 /* SpeecherLang */ = {
 			isa = PBXGroup;
 			children = (
+				8B92D87F23491DF700697F95 /* SpeecherLang.entitlements */,
 				8B92D86B23491DD700697F95 /* AppDelegate.swift */,
 				8B92D86D23491DD700697F95 /* SceneDelegate.swift */,
 				8B92D86F23491DD700697F95 /* ViewController.swift */,
+				8B3DB4442349DA540045AA76 /* SpeechResultsViewController.swift */,
+				8B9DCDFA234A0ED7002E2367 /* TokenTableViewCell.swift */,
+				8B9DCDFB234A0ED7002E2367 /* TokenTableViewCell.xib */,
+				8B9DCDFE234A1009002E2367 /* PillCollectionViewCell.swift */,
+				8B9DCDFF234A1009002E2367 /* PillCollectionViewCell.xib */,
 				8B92D87123491DD800697F95 /* Main.storyboard */,
 				8B92D87423491DD900697F95 /* Assets.xcassets */,
 				8B92D87623491DD900697F95 /* LaunchScreen.storyboard */,
@@ -84,7 +101,7 @@
 			);
 			name = SpeecherLang;
 			productName = SpeecherLang;
-			productReference = 8B92D86823491DD700697F95 /* SpeecherLang.app */;
+			productReference = 8B92D86823491DD700697F95 /* Speech Natural Language Analyzer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -127,7 +144,9 @@
 			files = (
 				8B92D87823491DD900697F95 /* LaunchScreen.storyboard in Resources */,
 				8B92D87523491DD900697F95 /* Assets.xcassets in Resources */,
+				8B9DCE01234A1009002E2367 /* PillCollectionViewCell.xib in Resources */,
 				8B92D87323491DD800697F95 /* Main.storyboard in Resources */,
+				8B9DCDFD234A0ED7002E2367 /* TokenTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,8 +158,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B92D87023491DD700697F95 /* ViewController.swift in Sources */,
+				8B9DCE00234A1009002E2367 /* PillCollectionViewCell.swift in Sources */,
+				8B9DCDFC234A0ED7002E2367 /* TokenTableViewCell.swift in Sources */,
 				8B92D86C23491DD700697F95 /* AppDelegate.swift in Sources */,
 				8B92D86E23491DD700697F95 /* SceneDelegate.swift in Sources */,
+				8B3DB4452349DA540045AA76 /* SpeechResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +238,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +292,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -284,15 +306,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SpeecherLang/SpeecherLang.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 5C2XD9H2JS;
 				INFOPLIST_FILE = SpeecherLang/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alfianlosari.SpeecherLang;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Speech Natural Language Analyzer";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,15 +328,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SpeecherLang/SpeecherLang.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 5C2XD9H2JS;
 				INFOPLIST_FILE = SpeecherLang/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alfianlosari.SpeecherLang;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Speech Natural Language Analyzer";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

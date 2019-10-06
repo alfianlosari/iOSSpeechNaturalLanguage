@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad12_9" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,113 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SpeecherLang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qvv-CT-AHB">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KdY-8s-d2t">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="576"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="KdY-8s-d2t" secondAttribute="height" multiplier="16:9" priority="999" id="5i9-5S-lOF"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Gmi-f7-y3S">
+                                        <rect key="frame" x="0.0" y="576" width="1024" height="790"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSa-4Z-nG4">
+                                                <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="wMe-j9-MxH"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Clear Current"/>
+                                                <connections>
+                                                    <action selector="clearTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3EG-pj-yVf"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sG9-OC-Dg2">
+                                                <rect key="frame" x="0.0" y="44" width="1024" height="47"/>
+                                                <subviews>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="50o-mF-eT5">
+                                                        <rect key="frame" x="363.5" y="8" width="297" height="32"/>
+                                                        <segments>
+                                                            <segment title="Live (Microphone)"/>
+                                                            <segment title="Convert to Audio File"/>
+                                                        </segments>
+                                                        <connections>
+                                                            <action selector="segmentChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="paq-kw-fV4"/>
+                                                        </connections>
+                                                    </segmentedControl>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="50o-mF-eT5" firstAttribute="top" secondItem="sG9-OC-Dg2" secondAttribute="top" constant="8" id="GyO-Rh-s0E"/>
+                                                    <constraint firstItem="50o-mF-eT5" firstAttribute="centerX" secondItem="sG9-OC-Dg2" secondAttribute="centerX" id="dld-ic-Bix"/>
+                                                    <constraint firstAttribute="bottom" secondItem="50o-mF-eT5" secondAttribute="bottom" constant="8" id="lrC-LC-jg1"/>
+                                                </constraints>
+                                            </view>
+                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gwj-AV-081">
+                                                <rect key="frame" x="0.0" y="91" width="1024" height="699"/>
+                                                <connections>
+                                                    <segue destination="Paf-K9-TGI" kind="embed" identifier="embed" id="dc2-m7-2hb"/>
+                                                </connections>
+                                            </containerView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drag and Drop Video to begin natural language speech analyzer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ry6-Gn-gQJ">
+                                <rect key="frame" x="16" y="64" width="992" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qvv-CT-AHB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9Cc-hV-Rq7"/>
+                            <constraint firstItem="Ry6-Gn-gQJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="QMK-zl-6hG"/>
+                            <constraint firstItem="qvv-CT-AHB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bPa-fK-Wfv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qvv-CT-AHB" secondAttribute="bottom" id="hEz-K3-NkE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ry6-Gn-gQJ" secondAttribute="trailing" constant="16" id="kjq-Zq-gya"/>
+                            <constraint firstItem="qvv-CT-AHB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xv4-Gp-m57"/>
+                            <constraint firstItem="Ry6-Gn-gQJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="ywe-WU-Rdm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="clearButton" destination="nSa-4Z-nG4" id="tY7-wd-JAi"/>
+                        <outlet property="hintLabel" destination="Ry6-Gn-gQJ" id="s2o-Sc-SW7"/>
+                        <outlet property="playerView" destination="KdY-8s-d2t" id="kGx-DB-Nhw"/>
+                        <outlet property="segmentedControl" destination="50o-mF-eT5" id="nFo-IC-m3h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+        <!--Speech Results View Controller-->
+        <scene sceneID="T2c-lI-Nfo">
+            <objects>
+                <tableViewController id="Paf-K9-TGI" customClass="SpeechResultsViewController" customModule="SpeecherLang" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="hbG-rG-LSA">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="699"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="Paf-K9-TGI" id="1wL-sZ-uW1"/>
+                            <outlet property="delegate" destination="Paf-K9-TGI" id="q9s-Aa-CsR"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SnJ-7g-7JJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="312"/>
         </scene>
     </scenes>
 </document>
